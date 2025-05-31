@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring Nightreign</title>
+    <link rel="stylesheet" href="../Elden Ring/css/style.css">
+    <link rel="stylesheet" href="../Elden Ring/plugins/bxslider.css">
+    <link rel="stylesheet" href="../Elden Ring/plugins/magnific-popup.css">
+</head>
+<body>
+    <header>
+        <h1>Elden Ring Nightreign</h1>
+        <nav>
+
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="../Elden Ring/pages/historia.html">História</a></li>
+                <li><a href="../Elden Ring/pages/personagens.html">Personagens</a></li>
+                <li><a href="../Elden Ring/pages/gameplay.html">Gameplay</a></li>
+                <li><a href="../Elden Ring/pages/builds.html">Builds</a></li>
+                <li><a href="../Elden Ring/pages/galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
+        </header>
+   
+
+<main class="main-home">
+
+  
+  <section class="intro">
+    <h2>Um mundo quebrado pela Névoa Negra</h2>
+    <p>
+      Nightreign é uma era esquecida em que os deuses desapareceram e os Receptores da Chama se voltaram contra seus criadores.
+      Um guerreiro solitário renasce das cinzas para enfrentar as sombras do passado e restaurar o equilíbrio.  
+    </p>
+  </section>
+
+  
+  <section class="destaques">
+    <div class="card">
+      <img src="../Elden Ring/imagens/Wormface.png" alt="Personagem épico">
+      <h3>Personagens</h3>
+      <p>Conheça os guerreiros amaldiçoados e seus passados sombrios.</p>
+      <a href="../Elden Ring/pages/personagens.html" class="btn">Explorar</a>
+    </div>
+
+    <div class="card">
+      <img src="../Elden Ring/imagens/mapa.jpg" alt="Mapa do mundo">
+      <h3>Mundo de Nightreign</h3>
+      <p>Desvende as regiões dominadas por trevas e os chefes ancestrais.</p>
+      <a href="#mapa-popup" class="open-popup">Ver mapa</a>
+    </div>
+
+    <div class="card">
+      <img src="../Elden Ring/imagens/banner2.jpg" alt="Galeria de imagens">
+      <h3>Galeria Sombria</h3>
+      <p>Imagens incríveis dos locais amaldiçoados e campos de batalha.</p>
+      <a href="../Elden Ring/pages/galeria.html" class="btn">Ver galeria</a>
+    </div>
+  </section>
+
+  
+  <section class="chamada">
+    <h2>Você está pronto para enfrentar a escuridão?</h2>
+    <a href="../Elden Ring/pages/historia.html" class="btn btn-secondary">Mergulhe na história</a>
+  </section>
+   
+  <div id="mapa-popup" class="mfp-hide popup-content">
+    <h2>Mapa de Nightreign</h2>
+    <img src="../Elden Ring/imagens/mapa.jpg" alt="Mapa do Mundo" style="width: 100%; border-radius: 10px; margin-top: 15px;">
+    <p style="margin-top: 15px;">
+        Explore terras esquecidas, dominadas pela Névoa Negra, Cada região guarda segredos antigos e perigos mortais.
+    </p>
+  </div>
+</main>
+      <script src="../Elden Ring/plugins/jquery.min copy.js"></script>
+      <script src="../Elden Ring/plugins/magnific-popup.js"></script>
+      <script>
+        $(document).ready(function() {
+            $('.open-popup').magnificPopup({
+                type: 'inline',
+                removalDelay: 300,
+                mainClass: 'popup-from-bottom',
+            });
+        });
+      </script>
+</body>
+</html>

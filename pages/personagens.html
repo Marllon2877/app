@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personagens</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .container {
+      display: flex;
+      min-height: 100vh;
+      background-color: #111;
+      color: #f0f0f0;
+    }
+    .menu-lateral {
+      width: 250px;
+      background-color: #222;
+      padding: 20px;
+      box-shadow: 2px 0 5px #000;
+    }
+    .menu-lateral ul {
+      list-style: none;
+      padding: 0;
+    }
+    .menu-lateral li {
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid #333;
+      transition: background 0.3s;
+    }
+    .menu-lateral li:hover {
+      background-color: #333;
+    }
+    .conteudo {
+      flex: 1;
+      padding: 40px;
+    }
+    .conteudo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #000;
+      margin-bottom: 20px;
+    }
+    .conteudo h2 {
+      color: #f5d45e;
+    }
+    .conteudo p {
+      font-size: 1.1em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Elden Ring Nightreign</h1>
+        <nav>
+
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../pages/historia.html">História</a></li>
+                <li><a href="../pages/personagens.html">Personagens</a></li>
+                <li><a href="../pages/gameplay.html">Gameplay</a></li>
+                 <li><a href="../pages/builds.html">Builds</a></li>
+                <li><a href="../pages/galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="container">
+    <aside class="menu-lateral">
+      <ul>
+        <li onclick="mostrarPersonagem('duchess')">Duchess</li>
+        <li onclick="mostrarPersonagem('recluse')">Recluse</li>
+        <li onclick="mostrarPersonagem('guardian')">Guardian</li>
+        <li onclick="mostrarPersonagem('ironeye')">Ironeye</li>
+        <li onclick="mostrarPersonagem('raider')">Raider</li>
+        <li onclick="mostrarPersonagem('wylder')">Wylder</li>
+        <li onclick="mostrarPersonagem('executor')">Executor</li>
+        <li onclick="mostrarPersonagem('nightidol')">Night Idol</li>
+        <li onclick="mostrarPersonagem('wormface')">Wormface</li>
+        <li onclick="mostrarPersonagem('famingchariots')">Flaming Chariots</li>
+        <li onclick="mostrarPersonagem('firemonk')">Fire Monk</li>
+        <li onclick="mostrarPersonagem('flyingdragonaghell')">Flying Dragon Agheel</li>
+        
+      </ul>
+    </aside>
+
+    <main class="conteudo" id="conteudo">
+      <h2>Selecione um personagem</h2>
+      <p>Ao clicar em um nome à esquerda, aparecerá aqui a imagem e descrição do personagem.</p>
+    </main>
+  </div>
+
+  <script>
+    const personagens = {
+      duchess: {
+        nome: "Duchess",
+        imagem: "../imagens/duchess.png",
+        descricao: "Uma assassina ágil que se move nas sombras, capaz de se tornar invisível e eliminar inimigos com precisão letal."
+      },
+      recluse: {
+        nome: "Recluse",
+        imagem: "../imagens/recluse.png",
+        descricao: "Maga elementalista que utiliza sangue arcano para lançar feitiços devastadores, punindo aqueles que habitam as sombras."
+      },
+      guardian: {
+        nome: "Guardian",
+        imagem: "../imagens/GUARDIAN.webp",
+        descricao: "Um tanque alado que protege aliados com escudo colossal e pode realizar ataques aéreos devastadores."
+      },
+      ironeye: {
+        nome: "Ironeye",
+        imagem: "../imagens/ironeye.webp",
+        descricao: "Arqueiro veloz e preciso, especialista em ataques à distância e mobilidade, capaz de marcar inimigos para aumentar o dano crítico."
+      },
+      raider: {
+        nome: "Raider",
+        imagem: "../imagens/raider.webp",
+        descricao: "Guerreiro destemido que utiliza um enorme martelo para causar danos massivos, equilibrando ataques ofensivos e defensivos."
+      },
+      wylder: {
+        nome: "Wylder",
+        imagem: "../imagens/WYLDER.webp",
+        descricao: "Guerreiro equilibrado com espada, escudo e uma garra que facilita movimentação rápida, ideal para iniciantes."
+      },
+      executor: {
+        nome: "Executor",
+        imagem: "../imagens/executor.webp",
+        descricao: "O Executor é um guerreiro amaldiçoado que empunha uma katana corrompida, destacando-se em combates corpo a corpo com foco em contra-ataques e deflexões precisas. Sua jogabilidade é inspirada em Sekiro: Shadows Die Twice, exigindo timing e habilidade para maximizar seu potencial."
+      },
+      nightidol: {
+        nome: "Night Idol",
+        imagem: "../imagens/Night idol.png",
+        descricao: "Uma entidade poderosa que comanda espíritos aliados, desafiando os jogadores com suas habilidades mágicas e invocações"
+      },
+      wormface: {
+            nome: "Wormface",
+            imagem: "../imagens/Wormface.png",
+            descricao: "Carruagens infernais que surgem como chefes errantes, causando destruição com suas chamas avassaladoras."
+        },
+        famingchariots: {
+            nome: "Flaming Chariots",
+            imagem: "../imagens/FlamingChariots.png",
+            descricao: "O chefe final, uma entidade sombria que desafia os jogadores com habilidades devastadoras e uma luta épica."
+        },
+        firemonk: {
+            nome: "Fire Monk",
+            imagem: "../imagens/fire_monk.webp",
+            descricao: "Um monge que canaliza o poder do fogo, desafiando os jogadores com ataques flamejantes e resistência."
+        },
+        flyingdragonaghell: {
+            nome: "Flying Dragon Agheel",
+            imagem: "../imagens/Flying Dragon Agheel.png",
+            descricao: "Um dragão alado que sobrevoa os céus de Limveld, pronto para atacar com investidas aéreas e sopros de fogo. "
+        }
+
+
+    };
+
+    function mostrarPersonagem(id) {
+      const personagem = personagens[id];
+      const conteudo = document.getElementById("conteudo");
+      conteudo.innerHTML = `
+        <h2>${personagem.nome}</h2>
+        <img src="${personagem.imagem}" alt="${personagem.nome}" />
+        <p>${personagem.descricao}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
